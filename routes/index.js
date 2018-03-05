@@ -8,12 +8,21 @@ var toRender = (config.kidsmode) ? 'main_kids' : 'home';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render(toRender, {
+  res.render('home', {
     title: 'Done yet?',
     message : "handlebars is awesome",
     mainpage : true,
+    cms : false,
     kidsmode : config.kidsmode
   });
+});
+
+router.get('/cms', (req, res) => {
+console.log('hit the cms route');
+res.render('cmsform', {
+cms : true,
+mainpage :  false
+});
 });
 
 module.exports = router;
