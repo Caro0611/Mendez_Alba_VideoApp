@@ -51,10 +51,13 @@ router.delete('/:id', (req, res) => {
   });
 });
 
-router.post('/:id', (req, res) => {
+router.post('/', (req, res) => {
   console.log(`hit the post route`);
 
-  connect.query(`INSERT into mainmodel (id, model, modelName, pricing, modelDetails, imgPath) VALUES (NULL, "${req.body.model}", "${req.body.modelName}", "${req.body.pricing}", "${req.body.modelDetails}",  "${req.body.imgPath}");`, (err, data) => {
+  connect.query(`INSERT into mainmodel (id, model, modelName, pricing, modelDetails,
+    imgPath) VALUES (NULL, "${req.body.model}", "${req.body.modelName}",
+    "${req.body.pricing}", "${req.body.modelDetails}",  "${req.body.imgPath}");`, (err,
+      data) => {
     if (err) {
       throw(err);
     } else {
