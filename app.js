@@ -21,6 +21,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/static', express.static(path.join(__dirname, 'public')));
+
 // import all of your routes
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
