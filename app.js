@@ -10,14 +10,18 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', xhb({ defaultLayout : 'main'}));
+app.engine('handlebars', xhb({
+  defaultLayout: 'main'
+}));
 app.set('view engine', 'handlebars');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -28,7 +32,7 @@ app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 app.use('/getCars', require('./routes/getCars'));
 app.use('/getParents', require('./routes/getParents'));
-//app.use('/getKids', require('./routes/getKids'));
+app.use('/getKids', require('./routes/getKids'));
 app.use('/api', require('./routes/api'));
 
 
