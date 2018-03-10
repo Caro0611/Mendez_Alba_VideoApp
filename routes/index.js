@@ -9,8 +9,8 @@ var toRender = (config.kidsmode) ? 'main_kids' : 'home';
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('home', {
-    title: 'Done yet?',
-    message : "handlebars is awesome",
+    title: 'Roku - Video App',
+    message : "Welcome to Roku!",
     mainpage : true,
     cms : false,
     kidsmode : config.kidsmode

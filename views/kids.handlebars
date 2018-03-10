@@ -1,17 +1,26 @@
-<a href="/">
-  <i class="fa-fa-home"></i>
-</a>
+<div class=containerr>
 
-<h1>{{ message }}</h1>
+<a href="/"><i class="fa-fa-home"></i></a>
+
+<h1 class="titlee">{{ message }}</h1>
 
 <ul>
   {{#each movies}}
     <li>
-      <h2>{{ name }}</h2>
-      <p>Rating: {{ rating }}</p>
+      <h2 class="movie_title">{{ name }}</h2>
+      <p class="rating">Rating: {{ rating }}</p>
       <h4>Reviews:</h4>
       <p>{{ reviews }}</p>
       <video src="/static/videos/{{ video_url }}" controls poster="/static/images/{{ thumbnail_url }}"></video>
     </li>
   {{/each}}
 </ul>
+<p class="logo">ROKU</p>
+
+<div id="last">
+<a href="/getindex" class="get-posts boton2">Home</a>
+<a href="/getParents" class="get-posts boton2">Parents</a>
+<a href="#" class="boton2">Settings</a>
+<a href="#" class="boton2">Contact us</a>
+</div>
+</div>

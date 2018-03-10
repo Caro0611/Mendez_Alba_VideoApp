@@ -1,7 +1,7 @@
 var config = {
   user : "root",
-  password : "", // leave this blank for windows machines
-  port: 3306,
+  password : "root", // leave this blank for windows machines
+  port: 8889, //3306
   host: "localhost",
   database: "movies",
 
