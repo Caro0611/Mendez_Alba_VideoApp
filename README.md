@@ -1,10 +1,17 @@
-# Node, Express, SQL and live data
-Completed build from this week!
-Git clone to the directory of your choice, cd into the project folder and NPM install.
-Run npm start and navigate to localhost:3000
+# Node, Express, SQL Video App
+This is a video NodeJS-based app named ROKU. 2 different option, Parents and Kids.
 
-you'll need to change the settings in config.js to point to your database, if you named it something different than what's in the file.
+# Getting Started - Prerequisites:
+1. Clone this project to a local repository, it is required using Git. 
+2. To develop this project, it is required installing and running NPM - NodeJS.
+3. Dynamic content is loaded from database to build the website, Import the database "movies.sql" found in "public" folder to your localserver (MariaDB, MAMP, WAMP, etc).
 
-NOTE - if you hit the delete button, that row will be gone from you database forever; the AJAX call for that car won't work and will start to error out.
+# Deployment
+in your terminal:
 
-So you'll have to add that data back in manually for now, because we haven't done the "post" part of the API.
+npm install
+
+npm start
+
+run app from your localhost (change config file if necessary)
+
